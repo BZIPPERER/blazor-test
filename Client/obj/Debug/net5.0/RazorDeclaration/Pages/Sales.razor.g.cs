@@ -8,7 +8,6 @@ namespace MafiaApplication.Client.Pages
 {
     #line hidden
     using System;
-    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
@@ -110,6 +109,41 @@ using Sylvan.Data.Csv;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 51 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+using CsvHelper;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 52 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+using System.IO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 53 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+using System.Text;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 54 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+using System.Globalization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 55 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+using System.Collections.Generic;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/sales")]
     public partial class Sales : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -119,9 +153,8 @@ using Sylvan.Data.Csv;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 50 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
-                            
-
+#line 55 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+                                      
 
     private int currentCount = 0;
     private string control = "";
@@ -131,40 +164,25 @@ using Sylvan.Data.Csv;
     protected override async Task OnInitializedAsync()
     {
         currentCount = 1000;
-        // this method runs on page start and fetches CSV data
-        // from path C:\Users\Benjamin\Downloads\100-Sales-Records
-        try
-        {
+       
         control = "init";
-
-        CsvDataReader forrester = new CsvDataReader ("@C:\\Libre.csv");
-        control = "a";
-        var idIndex      = forrester.GetOrdinal("OrderID");
-        var countryIndex = forrester.GetOrdinal("Country");
-        var regionIndex  = forrester.GetOrdinal("Region");
-        Console.WriteLine(idIndex + " "+countryIndex + " "+regionIndex);
-        control = "Test";
-        // get prick back
-        SalesItem norm = null;
-        while(await forrester.ReadAsync()) 
+        IEnumerable<SalesItem> records;
+        var fileName = @"C:\\Libre.csv";
+        using (var reader = new StreamReader(fileName))
         {
-            var id = forrester.GetInt32(idIndex);
-            var count = forrester.GetString(countryIndex);
-            var reg = forrester.GetString(regionIndex);
-            norm = new SalesItem()
+            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
-                OrderID = id,
-                Country = count,
-                Region = reg
-            };
+                records = csv.GetRecords<SalesItem>();
+            }
+            foreach (var single in records)
+            {
+            // Do something with values in each row
+            Console.WriteLine(single.Region);
+            }
         }
-        }
-        catch (System.Exception)
-        {
-            
-            Console.WriteLine("Fehler");
-        }
-      
+    }
+
+        
         /*
         for(int i = 0 ; i < 10 ; i++)
         {
@@ -176,7 +194,7 @@ using Sylvan.Data.Csv;
             };
             moon.Add(normal);
         }*/
-    }
+    
     private void IncrementCount()
     {
         currentCount++;

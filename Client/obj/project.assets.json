@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "CsvHelper/27.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/CsvHelper.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/CsvHelper.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/5.0.7": {
         "type": "package",
         "dependencies": {
@@ -327,6 +336,15 @@
       }
     },
     "net5.0/browser-wasm": {
+      "CsvHelper/27.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/CsvHelper.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/CsvHelper.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/5.0.7": {
         "type": "package",
         "dependencies": {
@@ -653,6 +671,28 @@
     }
   },
   "libraries": {
+    "CsvHelper/27.1.1": {
+      "sha512": "lo5yypClBORR2XiWPRxQApaA4C2R4GVCIPVRt9HfaLxLmVQtg/KZiOYsd4luLgyOxkUatF9R0QdFQYk7Y2l0cw==",
+      "type": "package",
+      "path": "csvhelper/27.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "csvhelper.27.1.1.nupkg.sha512",
+        "csvhelper.nuspec",
+        "lib/net45/CsvHelper.dll",
+        "lib/net45/CsvHelper.xml",
+        "lib/net47/CsvHelper.dll",
+        "lib/net47/CsvHelper.xml",
+        "lib/net5.0/CsvHelper.dll",
+        "lib/net5.0/CsvHelper.xml",
+        "lib/netstandard2.0/CsvHelper.dll",
+        "lib/netstandard2.0/CsvHelper.xml",
+        "lib/netstandard2.1/CsvHelper.dll",
+        "lib/netstandard2.1/CsvHelper.xml"
+      ]
+    },
     "Microsoft.AspNetCore.Authorization/5.0.7": {
       "sha512": "dLoLLlFkaj3+6oodVBBNjC9hjGMSzO9WT1syO54ZFACkPKddI1jEjvQ4aG4+NHIP0lp4e3zv3C5woWEZVpofKg==",
       "type": "package",
@@ -1203,6 +1243,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "CsvHelper >= 27.1.1",
       "MafiaApplication.Shared >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 5.0.7",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 5.0.7",
@@ -1261,6 +1302,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "CsvHelper": {
+            "target": "Package",
+            "version": "[27.1.1, )"
+          },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
             "version": "[5.0.7, )"

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YT3aqOLtX/2pNYL5l84PbUnuUHuIrju5zsWpanLW81fv7AFkwiyg3wsFS8Kwzy/tSJQCVUSTccONCmgUrd3koQ==",
+  "dgSpecHash": "SffezkVqMyVPouLodZl9+5Kh+e7BC9CVyt24rR0YkoU8WyieOSd5gQlzkZkm6V2L1CuOyMEIn5MseQwCVz6SzA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Benjamin\\source\\repo\\MafiaApplication\\Client\\MafiaApplication.Client.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Benjamin\\.nuget\\packages\\csvhelper\\27.1.1\\csvhelper.27.1.1.nupkg.sha512",
     "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.7\\microsoft.aspnetcore.authorization.5.0.7.nupkg.sha512",
     "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.aspnetcore.components\\5.0.7\\microsoft.aspnetcore.components.5.0.7.nupkg.sha512",
     "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\5.0.7\\microsoft.aspnetcore.components.analyzers.5.0.7.nupkg.sha512",
