@@ -58,3 +58,4 @@ C:\Users\Benjamin\source\repo\MafiaApplication\Server\obj\Debug\net5.0\MafiaAppl
 C:\Users\Benjamin\source\repo\MafiaApplication\Server\obj\Debug\net5.0\ref\MafiaApplication.Server.dll
 C:\Users\Benjamin\source\repo\MafiaApplication\Server\obj\Debug\net5.0\MafiaApplication.Server.pdb
 C:\Users\Benjamin\source\repo\MafiaApplication\Server\obj\Debug\net5.0\MafiaApplication.Server.genruntimeconfig.cache
+C:\Users\Benjamin\source\repo\MafiaApplication\Server\bin\Debug\net5.0\Sylvan.Data.Csv.dll

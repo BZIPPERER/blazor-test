@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lqkcIBtPEscrB2v75QSPdnCi8nqhKZPpBzO+Lw/v8DrtFd9+MBIcCDuZg33TQOctZo0SjzlutePu0/H2IOHGnA==",
+  "dgSpecHash": "PRg5RFg9qCfQYkVvL/50M3OiK2eDF2eD7qSeGK567eewrCeyiAQGq4up9QaOfunxA+ZR8qDweDAtlbb+IMs6mw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Benjamin\\source\\repo\\MafiaApplication\\Server\\MafiaApplication.Server.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,7 @@
     "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.jsinterop\\5.0.7\\microsoft.jsinterop.5.0.7.nupkg.sha512",
     "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.jsinterop.webassembly\\5.0.7\\microsoft.jsinterop.webassembly.5.0.7.nupkg.sha512",
+    "C:\\Users\\Benjamin\\.nuget\\packages\\sylvan.data.csv\\1.1.10\\sylvan.data.csv.1.1.10.nupkg.sha512",
     "C:\\Users\\Benjamin\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\Benjamin\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512"
   ],

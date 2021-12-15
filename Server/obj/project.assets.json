@@ -297,6 +297,15 @@
           "lib/net5.0/Microsoft.JSInterop.WebAssembly.dll": {}
         }
       },
+      "Sylvan.Data.Csv/1.1.10": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/Sylvan.Data.Csv.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Sylvan.Data.Csv.dll": {}
+        }
+      },
       "System.IO.Pipelines/5.0.1": {
         "type": "package",
         "compile": {
@@ -321,6 +330,7 @@
         "dependencies": {
           "MafiaApplication.Shared": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "5.0.7",
+          "Sylvan.Data.Csv": "1.1.10",
           "System.Net.Http.Json": "5.0.0"
         },
         "compile": {
@@ -805,6 +815,27 @@
         "lib/net5.0/Microsoft.JSInterop.WebAssembly.xml",
         "microsoft.jsinterop.webassembly.5.0.7.nupkg.sha512",
         "microsoft.jsinterop.webassembly.nuspec"
+      ]
+    },
+    "Sylvan.Data.Csv/1.1.10": {
+      "sha512": "wkbvZXA/8KT2Ondq9CZIoZVQNy2iiAHPV/1h4Imd3jkSl25FjEYLLqdf6mXe68GSKGzg9rnLsx78ZL41ejtgcw==",
+      "type": "package",
+      "path": "sylvan.data.csv/1.1.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Sylvan.png",
+        "lib/net6.0/Sylvan.Data.Csv.dll",
+        "lib/net6.0/Sylvan.Data.Csv.xml",
+        "lib/netcoreapp3.0/Sylvan.Data.Csv.dll",
+        "lib/netcoreapp3.0/Sylvan.Data.Csv.xml",
+        "lib/netstandard2.0/Sylvan.Data.Csv.dll",
+        "lib/netstandard2.0/Sylvan.Data.Csv.xml",
+        "lib/netstandard2.1/Sylvan.Data.Csv.dll",
+        "lib/netstandard2.1/Sylvan.Data.Csv.xml",
+        "license.txt",
+        "sylvan.data.csv.1.1.10.nupkg.sha512",
+        "sylvan.data.csv.nuspec"
       ]
     },
     "System.IO.Pipelines/5.0.1": {
