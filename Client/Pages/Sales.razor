@@ -1,28 +1,26 @@
 @page "/sales"
 @using MafiaApplication.Shared.Models
-<h1>Liste VERKAUF </h1>
+<h1>Liste <b>Verkauf</b> Güter-u-Region</h1>
 <table class="table">
 <thead>
     <tr style="background-color:grey;color:white">
         <td>
-          
+          Anzeige Id    
         </td>
         <td>
-           
+          Anzeige Land 
         </td>
-        <td>
-           
-        </td><td></td>
+          <td></td>
     </tr>
 </thead>
 <tbody>
 
-    @foreach (var item in items)
+    @foreach (var item in moonlit)
     {
         <tr>
-            <td>@item.Name.ToString()</td>
-            <td>@item.LastName.ToString()</td>
-            <td>@item.Location.ToString()</td><td>
+            <td>@item.OrderID.ToString()</td>
+            <td>@item.Country.ToString()</td>
+             <td>
                 <button class="btn btn-primary" >Record entfernen</button>
             </td>
         </tr>
@@ -43,59 +41,35 @@
 {
    
     @using System.Collections.ObjectModel;
-    
+    @using Sylvan.Data
+    @using Sylvan.Data.Csv 
 
     private int currentCount = 0;
 
-    private ObservableCollection<DataItem> items = 
-        new ObservableCollection<DataItem>();
+    private ObservableCollection<SalesItem> moonlit = 
+        new ObservableCollection<SalesItem>();
  
     protected override async Task OnInitializedAsync()
     {
         // this method runs on page start and fetches CSV data
         // from path C:\Users\Benjamin\Downloads\100-Sales-Records
+        using var csveinlesen = 
+        CsvDataReader.Create("C:\\Users\\Benjamin\\Downloads\\100-Sales-Records\\Libre.csv");
+        //var bind = DataBinder.Create<SalesItem>(csveinlesen);
 
-
-        DataItem punkt1 = new DataItem()
+        while(csveinlesen.Read())
         {
-            LastName = "Zipperer",
-            Name = "Benjamin",
-            Location = "Altdorf"
-        };
-        items.Add(punkt1);
-
-        DataItem punkt11 = new DataItem()
+            currentCount++;
+        }
+        Console.WriteLine("How many -->"+currentCount);
+        SalesItem norm = new SalesItem()
         {
-            LastName = "Müller",
-            Name = "Hans",
-            Location = "Altdorf"
+            OrderID = 1,
+            Country = "Germany"
         };
-        items.Add(punkt11);
+        moonlit.Add(norm);
 
-        DataItem punkt12 = new DataItem()
-        {
-            Name = "Lisa",
-            LastName = "Schultz",
-            Location = "Altdorf"
-        };
-        items.Add(punkt12);
-
-        DataItem punkt13 = new DataItem()
-        {
-            Name = "Bobby",
-            LastName = "Schuller",
-            Location = "Altdorf"
-        };
-        items.Add(punkt13);
-
-        //Noch nicht normalisiert
-        DataItem nonorm = new DataItem()
-        {
-            Name = "OB",
-            LastName = "Nopper",
-            Location = "Stuttgart"
-        };
-        items.Add(nonorm);
+      
     }
     private void IncrementCount()
     {
