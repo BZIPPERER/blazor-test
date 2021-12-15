@@ -1,16 +1,100 @@
 @page "/counter"
+@using MafiaApplication.Shared.Models
+<h1>Einwohnerliste</h1>
+<table class="table">
+<thead>
+    <tr style="background-color:grey;color:white">
+        <td>
+            Vorname
+        </td>
+        <td>
+            Nachname
+        </td>
+        <td>
+            Wohnort / Ort
+        </td><td></td>
+    </tr>
+</thead>
+<tbody>
 
-<h1>Counter</h1>
+    @foreach (var item in items)
+    {
+        <tr>
+            <td>@item.Name.ToString()</td>
+            <td>@item.LastName.ToString()</td>
+            <td>@item.Location.ToString()</td>
+        </tr>
 
+    }
+</tbody>
+
+
+
+</table>
+
+<!--
 <p>Current count: @currentCount</p>
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+-->
+@code 
+{
+   
+    @using System.Collections.ObjectModel;
+    
 
-@code {
     private int currentCount = 0;
 
+    private ObservableCollection<DataItem> items = 
+        new ObservableCollection<DataItem>();
+ 
+    protected override async Task OnInitializedAsync()
+    {
+        DataItem punkt1 = new DataItem()
+        {
+            LastName = "Zipperer",
+            Name = "Benjamin",
+            Location = "Altdorf"
+        };
+        items.Add(punkt1);
+
+        DataItem punkt11 = new DataItem()
+        {
+            LastName = "Müller",
+            Name = "Hans",
+            Location = "Altdorf"
+        };
+        items.Add(punkt11);
+
+        DataItem punkt12 = new DataItem()
+        {
+            Name = "Lisa",
+            LastName = "Schultz",
+            Location = "Altdorf"
+        };
+        items.Add(punkt12);
+
+        DataItem punkt13 = new DataItem()
+        {
+            Name = "Bobby",
+            LastName = "Schuller",
+            Location = "Altdorf"
+        };
+        items.Add(punkt13);
+
+        //Noch nicht normalisiert
+        DataItem nonorm = new DataItem()
+        {
+            Name = "OB",
+            LastName = "Nopper",
+            Location = "Stuttgart"
+        };
+        items.Add(nonorm);
+    }
     private void IncrementCount()
     {
         currentCount++;
     }
+
+
 }
