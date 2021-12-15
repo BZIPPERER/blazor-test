@@ -637,3 +637,5 @@ C:\Users\Benjamin\source\repo\MafiaApplication\Client\obj\Debug\net5.0\MafiaAppl
 C:\Users\Benjamin\source\repo\MafiaApplication\Client\bin\Debug\net5.0\wwwroot\_framework\Sylvan.Data.Csv.dll.gz
 C:\Users\Benjamin\source\repo\MafiaApplication\Client\bin\Debug\net5.0\wwwroot\_framework\Sylvan.Data.Csv.dll
 C:\Users\Benjamin\source\repo\MafiaApplication\Client\obj\Debug\net5.0\build-gz\lEeVnP+S.gz
+C:\Users\Benjamin\source\repo\MafiaApplication\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Sales.razor.g.cs
+C:\Users\Benjamin\source\repo\MafiaApplication\Client\obj\Debug\net5.0\Razor\Pages\Sales.razor.g.cs

@@ -1,17 +1,17 @@
-@page "/counter"
+@page "/sales"
 @using MafiaApplication.Shared.Models
-<h1>Einwohnerliste</h1>
+<h1>Liste VERKAUF </h1>
 <table class="table">
 <thead>
     <tr style="background-color:grey;color:white">
         <td>
-            Vorname
+          
         </td>
         <td>
-            Nachname
+           
         </td>
         <td>
-            Wohnort / Ort
+           
         </td><td></td>
     </tr>
 </thead>
@@ -23,7 +23,7 @@
             <td>@item.Name.ToString()</td>
             <td>@item.LastName.ToString()</td>
             <td>@item.Location.ToString()</td><td>
-                <button class="btn btn-primary" >Bewohner entfernen</button>
+                <button class="btn btn-primary" >Record entfernen</button>
             </td>
         </tr>
 

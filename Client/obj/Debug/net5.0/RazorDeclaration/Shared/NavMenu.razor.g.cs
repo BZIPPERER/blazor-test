@@ -90,7 +90,7 @@ using MafiaApplication.Client.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Shared\NavMenu.razor"
+#line 35 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

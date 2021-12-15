@@ -83,21 +83,21 @@ using MafiaApplication.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Counter.razor"
+#line 2 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
 using MafiaApplication.Shared.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 45 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Counter.razor"
+#line 45 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
 using System.Collections.ObjectModel;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
-    public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/sales")]
+    public partial class Sales : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -105,7 +105,7 @@ using System.Collections.ObjectModel;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 45 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Counter.razor"
+#line 45 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
                                           
     
 
