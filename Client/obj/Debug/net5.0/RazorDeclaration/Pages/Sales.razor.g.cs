@@ -90,21 +90,21 @@ using MafiaApplication.Shared.Models;
 #line hidden
 #nullable disable
 #nullable restore
-#line 43 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+#line 48 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
 using System.Collections.ObjectModel;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 44 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+#line 49 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
 using Sylvan.Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 45 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+#line 50 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
 using Sylvan.Data.Csv;
 
 #line default
@@ -119,35 +119,63 @@ using Sylvan.Data.Csv;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 45 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
-                           
+#line 50 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+                            
+
 
     private int currentCount = 0;
-
-    private ObservableCollection<SalesItem> moonlit = 
+    private string control = "";
+    private ObservableCollection<SalesItem> moon = 
         new ObservableCollection<SalesItem>();
  
     protected override async Task OnInitializedAsync()
     {
+        currentCount = 1000;
         // this method runs on page start and fetches CSV data
         // from path C:\Users\Benjamin\Downloads\100-Sales-Records
-        using var csveinlesen = 
-        CsvDataReader.Create("C:\\Users\\Benjamin\\Downloads\\100-Sales-Records\\Libre.csv");
-        //var bind = DataBinder.Create<SalesItem>(csveinlesen);
-
-        while(csveinlesen.Read())
+        try
         {
-            currentCount++;
+        control = "init";
+
+        CsvDataReader forrester = new CsvDataReader ("@C:\\Libre.csv");
+        control = "a";
+        var idIndex      = forrester.GetOrdinal("OrderID");
+        var countryIndex = forrester.GetOrdinal("Country");
+        var regionIndex  = forrester.GetOrdinal("Region");
+        Console.WriteLine(idIndex + " "+countryIndex + " "+regionIndex);
+        control = "Test";
+        // get prick back
+        SalesItem norm = null;
+        while(await forrester.ReadAsync()) 
+        {
+            var id = forrester.GetInt32(idIndex);
+            var count = forrester.GetString(countryIndex);
+            var reg = forrester.GetString(regionIndex);
+            norm = new SalesItem()
+            {
+                OrderID = id,
+                Country = count,
+                Region = reg
+            };
         }
-        Console.WriteLine("How many -->"+currentCount);
-        SalesItem norm = new SalesItem()
+        }
+        catch (System.Exception)
         {
-            OrderID = 1,
-            Country = "Germany"
-        };
-        moonlit.Add(norm);
-
+            
+            Console.WriteLine("Fehler");
+        }
       
+        /*
+        for(int i = 0 ; i < 10 ; i++)
+        {
+            SalesItem normal = new SalesItem()
+            {
+                OrderID = 1,
+                Country = "count",
+                Region = "FOO"
+            };
+            moon.Add(normal);
+        }*/
     }
     private void IncrementCount()
     {

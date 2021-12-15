@@ -8,18 +8,23 @@
           Anzeige Id    
         </td>
         <td>
-          Anzeige Land 
+          Anzeige Land
         </td>
+        <td>
+         curse @control
+        </td>
+
           <td></td>
     </tr>
 </thead>
 <tbody>
 
-    @foreach (var item in moonlit)
+    @foreach (var item in moon)
     {
         <tr>
-            <td>@item.OrderID.ToString()</td>
+            <td>1</td>
             <td>@item.Country.ToString()</td>
+            <td>@item.Region.ToString()</td>
              <td>
                 <button class="btn btn-primary" >Record entfernen</button>
             </td>
@@ -32,44 +37,72 @@
 
 </table>
 
-<!--
+
 <p>Current count: @currentCount</p>
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
--->
+
 @code 
 {
    
     @using System.Collections.ObjectModel;
-    @using Sylvan.Data
-    @using Sylvan.Data.Csv 
+    @using Sylvan.Data;
+    @using Sylvan.Data.Csv; 
+
 
     private int currentCount = 0;
-
-    private ObservableCollection<SalesItem> moonlit = 
+    private string control = "";
+    private ObservableCollection<SalesItem> moon = 
         new ObservableCollection<SalesItem>();
  
     protected override async Task OnInitializedAsync()
     {
+        currentCount = 1000;
         // this method runs on page start and fetches CSV data
         // from path C:\Users\Benjamin\Downloads\100-Sales-Records
-        using var csveinlesen = 
-        CsvDataReader.Create("C:\\Users\\Benjamin\\Downloads\\100-Sales-Records\\Libre.csv");
-        //var bind = DataBinder.Create<SalesItem>(csveinlesen);
-
-        while(csveinlesen.Read())
+        try
         {
-            currentCount++;
+        control = "init";
+
+        CsvDataReader forrester = new CsvDataReader ("@C:\\Libre.csv");
+        control = "a";
+        var idIndex      = forrester.GetOrdinal("OrderID");
+        var countryIndex = forrester.GetOrdinal("Country");
+        var regionIndex  = forrester.GetOrdinal("Region");
+        Console.WriteLine(idIndex + " "+countryIndex + " "+regionIndex);
+        control = "Test";
+        // get prick back
+        SalesItem norm = null;
+        while(await forrester.ReadAsync()) 
+        {
+            var id = forrester.GetInt32(idIndex);
+            var count = forrester.GetString(countryIndex);
+            var reg = forrester.GetString(regionIndex);
+            norm = new SalesItem()
+            {
+                OrderID = id,
+                Country = count,
+                Region = reg
+            };
         }
-        Console.WriteLine("How many -->"+currentCount);
-        SalesItem norm = new SalesItem()
+        }
+        catch (System.Exception)
         {
-            OrderID = 1,
-            Country = "Germany"
-        };
-        moonlit.Add(norm);
-
+            
+            Console.WriteLine("Fehler");
+        }
       
+        /*
+        for(int i = 0 ; i < 10 ; i++)
+        {
+            SalesItem normal = new SalesItem()
+            {
+                OrderID = 1,
+                Country = "count",
+                Region = "FOO"
+            };
+            moon.Add(normal);
+        }*/
     }
     private void IncrementCount()
     {
