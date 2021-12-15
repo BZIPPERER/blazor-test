@@ -10,3 +10,15 @@ C:\Users\Benjamin\source\repo\MafiaApplication\Shared\obj\Debug\net5.0\MafiaAppl
 C:\Users\Benjamin\source\repo\MafiaApplication\Shared\obj\Debug\net5.0\MafiaApplication.Shared.dll
 C:\Users\Benjamin\source\repo\MafiaApplication\Shared\obj\Debug\net5.0\ref\MafiaApplication.Shared.dll
 C:\Users\Benjamin\source\repo\MafiaApplication\Shared\obj\Debug\net5.0\MafiaApplication.Shared.pdb
+C:\Git\Projekt1\Shared\bin\Debug\net5.0\MafiaApplication.Shared.deps.json
+C:\Git\Projekt1\Shared\bin\Debug\net5.0\MafiaApplication.Shared.dll
+C:\Git\Projekt1\Shared\bin\Debug\net5.0\ref\MafiaApplication.Shared.dll
+C:\Git\Projekt1\Shared\bin\Debug\net5.0\MafiaApplication.Shared.pdb
+C:\Git\Projekt1\Shared\obj\Debug\net5.0\MafiaApplication.Shared.csproj.AssemblyReference.cache
+C:\Git\Projekt1\Shared\obj\Debug\net5.0\MafiaApplication.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\Projekt1\Shared\obj\Debug\net5.0\MafiaApplication.Shared.AssemblyInfoInputs.cache
+C:\Git\Projekt1\Shared\obj\Debug\net5.0\MafiaApplication.Shared.AssemblyInfo.cs
+C:\Git\Projekt1\Shared\obj\Debug\net5.0\MafiaApplication.Shared.csproj.CoreCompileInputs.cache
+C:\Git\Projekt1\Shared\obj\Debug\net5.0\MafiaApplication.Shared.dll
+C:\Git\Projekt1\Shared\obj\Debug\net5.0\ref\MafiaApplication.Shared.dll
+C:\Git\Projekt1\Shared\obj\Debug\net5.0\MafiaApplication.Shared.pdb

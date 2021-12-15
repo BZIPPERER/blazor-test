@@ -198,14 +198,14 @@
       "netstandard.dll": "sha256-dOHF0zANIyA4WS496iWrAkTuEFWSWrXJjZj2pQQHrMA=",
       "System.Private.CoreLib.dll": "sha256-C96+zv+mWW0XzMG520oRgAG1lHVY8xzWGc6oc6rFjws=",
       "MafiaApplication.Shared.dll": "sha256-Ygb7WYPg\/TvbGIiCX3LPZD776SNDScUW5vgSEl8Q4OI=",
-      "MafiaApplication.Client.dll": "sha256-hTJ2vDi\/tywsq\/dvBhhmHQeN1nXDWYu0BJCJcZH2nOs="
+      "MafiaApplication.Client.dll": "sha256-Ip\/mBXTZZYrBBSk2AiIY7zhCwjVCSP+nGZM1y\/Z++PE="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "MafiaApplication.Shared.pdb": "sha256-lLRIwjdPyeEVUy0brdG33q3YUKQPXYSkqMagsxVnRkc=",
-      "MafiaApplication.Client.pdb": "sha256-d7tfwu9+z4pVGiEgy06nWCybMwUhWYdTceRvurOBqpI="
+      "MafiaApplication.Client.pdb": "sha256-FltPXXAGu4gj5AK4j9UpKbL8rD0B1bJ3vZmsQkriRlo="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-ir9YCVnnk7popgsYUkvitfGA4WpkP1ydPh\/ENHnxGys=",
