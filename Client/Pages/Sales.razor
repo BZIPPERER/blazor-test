@@ -5,13 +5,13 @@
 <thead>
     <tr style="background-color:grey;color:white">
         <td>
-          Anzeige Id    
+colornzeige Id    
         </td>
         <td>
           Anzeige Land
         </td>
         <td>
-         curse @control
+         kurs: @control
         </td>
 
           <td></td>
@@ -19,14 +19,15 @@
 </thead>
 <tbody>
 
-    @foreach (var item in moon)
+    @foreach (var item in liste)
     {
         <tr>
             <td>1</td>
-            <td>@item.Country.ToString()</td>
+            <td>@currentCount</td>
             <td>@item.Region.ToString()</td>
              <td>
-                <button class="btn btn-primary" >Record entfernen</button>
+                <button class="btn btn-primary"  style="background-color:yellow;color:black;
+                font-weight:bolder" >Eintrag entfernen</button>
             </td>
         </tr>
 
@@ -49,6 +50,7 @@
     @using Sylvan.Data;
     @using Sylvan.Data.Csv; 
     @using CsvHelper
+    @using CsvHelper.Configuration;
     @using System.IO
     @using System.Text 
     @using System.Globalization
@@ -56,43 +58,39 @@
 
     private int currentCount = 0;
     private string control = "";
-    private ObservableCollection<SalesItem> moon = 
+    private ObservableCollection<SalesItem> liste = 
         new ObservableCollection<SalesItem>();
- 
+
     protected override async Task OnInitializedAsync()
     {
         currentCount = 1000;
-       
-        control = "init";
-        IEnumerable<SalesItem> records;
-        var fileName = @"C:\\Libre.csv";
-        using (var reader = new StreamReader(fileName))
+
+
+        bool toggle = true;
+        SalesItem normal = null;
+        for (int i = 0; i < 10; i++)
         {
-            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+            if (i % 2 == 0)
             {
-                records = csv.GetRecords<SalesItem>();
+                normal = new SalesItem()
+                    {
+
+                        Country = "count",
+                        Region = "UP"
+                    };
             }
-            foreach (var single in records)
+            else
             {
-            // Do something with values in each row
-            Console.WriteLine(single.Region);
+                normal = new SalesItem()
+                    {
+
+                        Country = "count",
+                        Region = "DOWN"
+                    };        
             }
+            liste.Add(normal);
         }
     }
-
-        
-        /*
-        for(int i = 0 ; i < 10 ; i++)
-        {
-            SalesItem normal = new SalesItem()
-            {
-                OrderID = 1,
-                Country = "count",
-                Region = "FOO"
-            };
-            moon.Add(normal);
-        }*/
-    
     private void IncrementCount()
     {
         currentCount++;

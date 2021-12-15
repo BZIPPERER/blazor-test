@@ -12,133 +12,140 @@ namespace MafiaApplication.Client.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\_Imports.razor"
+#line 1 "C:\Git\Projekt1\Client\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\_Imports.razor"
+#line 2 "C:\Git\Projekt1\Client\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\_Imports.razor"
+#line 3 "C:\Git\Projekt1\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\_Imports.razor"
+#line 4 "C:\Git\Projekt1\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\_Imports.razor"
+#line 5 "C:\Git\Projekt1\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\_Imports.razor"
+#line 6 "C:\Git\Projekt1\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\_Imports.razor"
+#line 7 "C:\Git\Projekt1\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\_Imports.razor"
+#line 8 "C:\Git\Projekt1\Client\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\_Imports.razor"
+#line 9 "C:\Git\Projekt1\Client\_Imports.razor"
 using MafiaApplication.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\_Imports.razor"
+#line 10 "C:\Git\Projekt1\Client\_Imports.razor"
 using MafiaApplication.Client.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+#line 2 "C:\Git\Projekt1\Client\Pages\Sales.razor"
 using MafiaApplication.Shared.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 48 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+#line 49 "C:\Git\Projekt1\Client\Pages\Sales.razor"
 using System.Collections.ObjectModel;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 49 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+#line 50 "C:\Git\Projekt1\Client\Pages\Sales.razor"
 using Sylvan.Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 50 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+#line 51 "C:\Git\Projekt1\Client\Pages\Sales.razor"
 using Sylvan.Data.Csv;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 51 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+#line 52 "C:\Git\Projekt1\Client\Pages\Sales.razor"
 using CsvHelper;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 52 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+#line 53 "C:\Git\Projekt1\Client\Pages\Sales.razor"
+using CsvHelper.Configuration;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 54 "C:\Git\Projekt1\Client\Pages\Sales.razor"
 using System.IO;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 53 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+#line 55 "C:\Git\Projekt1\Client\Pages\Sales.razor"
 using System.Text;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 54 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+#line 56 "C:\Git\Projekt1\Client\Pages\Sales.razor"
 using System.Globalization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 55 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+#line 57 "C:\Git\Projekt1\Client\Pages\Sales.razor"
 using System.Collections.Generic;
 
 #line default
@@ -153,48 +160,44 @@ using System.Collections.Generic;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 55 "C:\Users\Benjamin\source\repo\MafiaApplication\Client\Pages\Sales.razor"
+#line 57 "C:\Git\Projekt1\Client\Pages\Sales.razor"
                                       
 
     private int currentCount = 0;
     private string control = "";
-    private ObservableCollection<SalesItem> moon = 
+    private ObservableCollection<SalesItem> liste = 
         new ObservableCollection<SalesItem>();
- 
+
     protected override async Task OnInitializedAsync()
     {
         currentCount = 1000;
-       
-        control = "init";
-        IEnumerable<SalesItem> records;
-        var fileName = @"C:\\Libre.csv";
-        using (var reader = new StreamReader(fileName))
+
+
+        bool toggle = true;
+        SalesItem normal = null;
+        for (int i = 0; i < 10; i++)
         {
-            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+            if (i % 2 == 0)
             {
-                records = csv.GetRecords<SalesItem>();
+                normal = new SalesItem()
+                    {
+
+                        Country = "count",
+                        Region = "UP"
+                    };
             }
-            foreach (var single in records)
+            else
             {
-            // Do something with values in each row
-            Console.WriteLine(single.Region);
+                normal = new SalesItem()
+                    {
+
+                        Country = "count",
+                        Region = "DOWN"
+                    };        
             }
+            liste.Add(normal);
         }
     }
-
-        
-        /*
-        for(int i = 0 ; i < 10 ; i++)
-        {
-            SalesItem normal = new SalesItem()
-            {
-                OrderID = 1,
-                Country = "count",
-                Region = "FOO"
-            };
-            moon.Add(normal);
-        }*/
-    
     private void IncrementCount()
     {
         currentCount++;

@@ -1,32 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Benjamin\\source\\repo\\MafiaApplication\\Client\\MafiaApplication.Client.csproj": {}
+    "C:\\Git\\Projekt1\\Client\\MafiaApplication.Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Benjamin\\source\\repo\\MafiaApplication\\Client\\MafiaApplication.Client.csproj": {
+    "C:\\Git\\Projekt1\\Client\\MafiaApplication.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Benjamin\\source\\repo\\MafiaApplication\\Client\\MafiaApplication.Client.csproj",
+        "projectUniqueName": "C:\\Git\\Projekt1\\Client\\MafiaApplication.Client.csproj",
         "projectName": "MafiaApplication.Client",
-        "projectPath": "C:\\Users\\Benjamin\\source\\repo\\MafiaApplication\\Client\\MafiaApplication.Client.csproj",
-        "packagesPath": "C:\\Users\\Benjamin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Benjamin\\source\\repo\\MafiaApplication\\Client\\obj\\",
+        "projectPath": "C:\\Git\\Projekt1\\Client\\MafiaApplication.Client.csproj",
+        "packagesPath": "C:\\Users\\Zipperer\\.nuget\\packages\\",
+        "outputPath": "C:\\Git\\Projekt1\\Client\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Benjamin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.1.config",
+          "C:\\Users\\Zipperer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -34,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Benjamin\\source\\repo\\MafiaApplication\\Shared\\MafiaApplication.Shared.csproj": {
-                "projectPath": "C:\\Users\\Benjamin\\source\\repo\\MafiaApplication\\Shared\\MafiaApplication.Shared.csproj"
+              "C:\\Git\\Projekt1\\Shared\\MafiaApplication.Shared.csproj": {
+                "projectPath": "C:\\Git\\Projekt1\\Shared\\MafiaApplication.Shared.csproj"
               }
             }
           }
@@ -85,7 +79,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.browser-wasm",
-              "version": "[5.0.7, 5.0.7]"
+              "version": "[5.0.12, 5.0.12]"
             }
           ],
           "frameworkReferences": {
@@ -93,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -102,29 +96,23 @@
         }
       }
     },
-    "C:\\Users\\Benjamin\\source\\repo\\MafiaApplication\\Shared\\MafiaApplication.Shared.csproj": {
+    "C:\\Git\\Projekt1\\Shared\\MafiaApplication.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Benjamin\\source\\repo\\MafiaApplication\\Shared\\MafiaApplication.Shared.csproj",
+        "projectUniqueName": "C:\\Git\\Projekt1\\Shared\\MafiaApplication.Shared.csproj",
         "projectName": "MafiaApplication.Shared",
-        "projectPath": "C:\\Users\\Benjamin\\source\\repo\\MafiaApplication\\Shared\\MafiaApplication.Shared.csproj",
-        "packagesPath": "C:\\Users\\Benjamin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Benjamin\\source\\repo\\MafiaApplication\\Shared\\obj\\",
+        "projectPath": "C:\\Git\\Projekt1\\Shared\\MafiaApplication.Shared.csproj",
+        "packagesPath": "C:\\Users\\Zipperer\\.nuget\\packages\\",
+        "outputPath": "C:\\Git\\Projekt1\\Shared\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Benjamin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.1.config",
+          "C:\\Users\\Zipperer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -158,7 +146,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
